@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$$ujw4ex3yjh_3kc0*lpeni3hpcp#do)xi(89(!xr2)2qplm7(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['efe-production.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -144,3 +144,4 @@ DATABASES['default'].update(db_from_env)
 # Simplified static file serving.
 # https://pypi.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+CSRF_TRUSTED_ORIGINS = ['https://efe-production.up.railway.app/']
