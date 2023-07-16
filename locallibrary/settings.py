@@ -144,4 +144,4 @@ DATABASES['default'].update(db_from_env)
 # https://pypi.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-CSRF_TRUSTED_ORIGINS = ['https://efe-production.up.railway.app/','https://efe-production.up.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://efe-production.up.railway.app/','https://efe-production.up.railway.app/accounts/login/']
