@@ -29,7 +29,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ZUa2Q4hVgIGmWDT6_mRmjDnqfM8Xrl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vimysite-production.up.railway.app','https://*.127.0.0.1']
+ALLOWED_HOSTS = ["https://vimysite-production.up.railway.app",'https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ["https://vimysite-production.up.railway.app",'https://*.127.0.0.1']
 
 CORS_ALLOWED_ORIGINS = [
     "https://vimysite-production.up.railway.app",
@@ -152,7 +153,6 @@ DATABASES['default'].update(db_from_env)
 # https://pypi.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-CSRF_TRUSTED_ORIGINS = ['https://vimysite-production.up.railway.app/','https://*.127.0.0.1']
 # Trong settings.py
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
