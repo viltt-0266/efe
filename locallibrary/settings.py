@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = True
 
-ALLOWED_HOSTS = ['efe-production.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['vimysite-production.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -147,4 +147,4 @@ DATABASES['default'].update(db_from_env)
 # https://pypi.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-CSRF_TRUSTED_ORIGINS = ['https://efe-production.up.railway.app/catalog/']
+CSRF_TRUSTED_ORIGINS = ['https://vimysite-production.up.railway.app/']
