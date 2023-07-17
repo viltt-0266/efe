@@ -31,7 +31,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['vimysite-production.up.railway.app', '127.0.0.1']
 
-
+CORS_ALLOWED_ORIGINS = [
+    "https://vimysite-production.up.railway.app",
+    # Add other trusted origins here if needed
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig',
+    'corsheaders',
     #'bootstrap5',
 ]
 
@@ -56,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'django.middleware.locale.LocaleMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 
 ]
 
