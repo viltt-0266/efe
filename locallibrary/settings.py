@@ -153,3 +153,6 @@ DATABASES['default'].update(db_from_env)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 CSRF_TRUSTED_ORIGINS = ['https://vimysite-production.up.railway.app/']
+# Trong settings.py
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
